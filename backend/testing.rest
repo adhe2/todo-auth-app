@@ -1,0 +1,95 @@
+###
+// Created User Admin (Locked)
+POST http://localhost:5000/users
+Content-Type: application/json
+
+{
+    "name": "admin",
+    "email": "admin@gmail.com",
+    "password": "admin@1234",
+    "confPassword": "admin@1234",
+    "role": "admin"
+}
+###
+// Login User Admin 
+POST http://localhost:5000/login
+Content-Type: application/json
+
+{
+    "name": "admin",
+    "email": "admin@gmail.com",
+    "password": "admin@1234",
+    "confPassword": "admin@1234"
+}
+
+###
+// Created User 
+POST http://localhost:5000/users
+Content-Type: application/json
+
+{
+   "name": "Adherangga",
+    "email": "Adherangga@gmail.com",
+    "password": "@123456",
+    "confPassword": "@123456"
+}
+
+###
+// Get All Users
+GET http://localhost:5000/users
+
+###
+// Get One User
+GET http://localhost:5000/users/72628f46-b167-4683-b2c2-31c87b1ebcaa
+
+
+###
+// Hapus akun user
+DELETE http://localhost:5000/users/5663abac-2831-493c-990d-2e68857f0136
+
+###
+// Login User 1
+POST http://localhost:5000/login
+Content-Type: application/json
+
+{
+    "name": "Adhe 2",
+    "email": "Adhe2@gmail.com",
+    "password": "@1234",
+    "confPassword": "@1234"
+}
+###
+// Login User 2
+POST http://localhost:5000/login
+Content-Type: application/json
+
+{
+    "name": "Adherangga",
+    "email": "Adherangga@gmail.com",
+    "password": "@123456",
+    "confPassword": "@123456"
+}
+
+###
+// Melihat user yang saat ini sedang login
+GET http://localhost:5000/me
+
+###
+// Logout dari akun saat ini
+DELETE http://localhost:5000/logout
+
+
+###
+// Melihat Semua Tugas yang ada
+GET http://localhost:5000/todos
+
+###
+// Created Todos 
+POST http://localhost:5000/todos
+Content-Type: application/json
+
+{
+    "title": "Belajar Bahasa Inggris",
+    "description": "Learning English Basic Verb: verb 1, 2, and 3",
+    "status": "pending"
+}
